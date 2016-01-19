@@ -27,6 +27,7 @@
     [self.soundManager playMusic];
 }
 
+#pragma mark - Button Actions
 
 - (IBAction)onJumpPressed:(id)sender {
     [self.soundManager playSound:@"smb_jump-small" :@"wav"];

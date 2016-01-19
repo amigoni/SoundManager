@@ -10,8 +10,12 @@
 
 @implementation SoundMananger
 
+#pragma mark -
+#pragma mark Initialization methods
+
 + (SoundMananger*)sharedManager
 {
+    //Ensuring Singleton
     static SoundMananger *_sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     
@@ -23,10 +27,13 @@
 
 - (id)init {
     if (self = [super init]) {
-        _musicEnabled = YES; //Would set this value from saved property in the future
+        self.musicEnabled = YES; //Would set this value from saved property in the future
     }
+    
     return self;
 }
+
+#pragma mark - Play methods
 
 - (void)playSound :(NSString *)fileName :(NSString *) extension{
     SystemSoundID audioEffect;
@@ -41,15 +48,15 @@
 
 
 - (void) loadMusic: (NSString *)fileName :(NSString *) extension {
-    if (!_backgroundMusicPlayer){
+    if (!self.backgroundMusicPlayer){
         NSError *error;
         NSURL *backgroundMusicURL = [self getURLfromFileName:fileName :extension];
         if (backgroundMusicURL) {
-            _backgroundMusicPlayer = [[AVAudioPlayer alloc]
+            self.backgroundMusicPlayer = [[AVAudioPlayer alloc]
                                       initWithContentsOfURL:backgroundMusicURL error:&error];
-            _backgroundMusicPlayer.delegate = self;
-            _backgroundMusicPlayer.numberOfLoops = -1; //Perpetual looping
-            [_backgroundMusicPlayer prepareToPlay];
+            self.backgroundMusicPlayer.delegate = self;
+            self.backgroundMusicPlayer.numberOfLoops = -1; //Perpetual looping
+            [self.backgroundMusicPlayer prepareToPlay];
             
             if (error) {
                 NSLog(@"error: %@", error.description);
@@ -58,23 +65,25 @@
     }
 }
 
+
 - (void) playMusic {
-    [_backgroundMusicPlayer play];
-    _musicPlaying = YES;
+    [self.backgroundMusicPlayer play];
+    self.musicPlaying = YES;
 }
 
 
 - (void) pauseMusic {
-    [_backgroundMusicPlayer pause];
-    _musicPlaying = NO;
+    [self.backgroundMusicPlayer pause];
+    self.musicPlaying = NO;
 }
 
 
 - (void) stopMusic {
     [_backgroundMusicPlayer stop];
-    _musicPlaying = NO;
+    self.musicPlaying = NO;
 }
 
+#pragma mark - Other methods
 
 - (NSURL *) getURLfromFileName: (NSString *)fileName : (NSString * ) extension {
     NSString *path = [[NSBundle mainBundle] pathForResource : fileName ofType :extension];
@@ -89,5 +98,6 @@
     
     return pathURL;
 }
+
 
 @end
