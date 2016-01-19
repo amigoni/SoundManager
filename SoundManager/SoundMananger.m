@@ -8,6 +8,12 @@
 
 #import "SoundMananger.h"
 
+@interface SoundMananger() <AVAudioPlayerDelegate>
+
+@property NSMutableDictionary *soundsIDs;
+
+@end
+
 @implementation SoundMananger
 
 #pragma mark -
@@ -36,27 +42,34 @@
 #pragma mark - Play methods
 
 - (void)playSound :(NSString *)fileName :(NSString *) extension{
-    SystemSoundID audioEffect;
+    SystemSoundID soundID;
     
     NSURL *pathURL = [self getURLfromFileName:fileName :extension];
+    
     if (pathURL) {
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
-        AudioServicesPlaySystemSound(audioEffect);
-        
+        soundID = (SystemSoundID)self.soundsIDs[pathURL];
+        if (soundID) {
+            AudioServicesPlaySystemSound(soundID);
+        } else {
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &soundID);
+            NSNumber *num  = [[NSNumber alloc] initWithUnsignedLong:soundID];
+            [self.soundsIDs setValue: num forKey:(NSString *)pathURL];
+            AudioServicesPlaySystemSound(soundID);
+        }
     }
 }
 
 
 - (void) loadMusic: (NSString *)fileName :(NSString *) extension {
-    if (!self.backgroundMusicPlayer){
+    if (!self.musicPlayer){
         NSError *error;
-        NSURL *backgroundMusicURL = [self getURLfromFileName:fileName :extension];
-        if (backgroundMusicURL) {
-            self.backgroundMusicPlayer = [[AVAudioPlayer alloc]
-                                      initWithContentsOfURL:backgroundMusicURL error:&error];
-            self.backgroundMusicPlayer.delegate = self;
-            self.backgroundMusicPlayer.numberOfLoops = -1; //Perpetual looping
-            [self.backgroundMusicPlayer prepareToPlay];
+        NSURL *musicURL = [self getURLfromFileName:fileName :extension];
+        if (musicURL) {
+            self.musicPlayer = [[AVAudioPlayer alloc]
+                                      initWithContentsOfURL:musicURL error:&error];
+            self.musicPlayer.delegate = self;
+            self.musicPlayer.numberOfLoops = -1; //Perpetual looping
+            [self.musicPlayer prepareToPlay];
             
             if (error) {
                 NSLog(@"error: %@", error.description);
@@ -67,19 +80,19 @@
 
 
 - (void) playMusic {
-    [self.backgroundMusicPlayer play];
+    [self.musicPlayer play];
     self.musicPlaying = YES;
 }
 
 
 - (void) pauseMusic {
-    [self.backgroundMusicPlayer pause];
+    [self.musicPlayer pause];
     self.musicPlaying = NO;
 }
 
 
 - (void) stopMusic {
-    [_backgroundMusicPlayer stop];
+    [self.musicPlayer stop];
     self.musicPlaying = NO;
 }
 

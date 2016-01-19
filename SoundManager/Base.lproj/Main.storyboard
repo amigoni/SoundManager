@@ -26,6 +26,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRw-Ws-zos" userLabel="MusicButton">
+                                <rect key="frame" x="500" y="28" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="SYQ-WF-QeX"/>
+                                    <constraint firstAttribute="height" constant="40" id="ug2-sA-F1J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="onMusicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9a-Ld-w3Z"/>
+                                </connections>
+                            </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1-Up" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-P2-rcz">
                                 <rect key="frame" x="235" y="236" width="100" height="100"/>
                                 <constraints>
@@ -48,66 +60,34 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QTL-1w-lmW" userLabel="ButtonsStack">
-                                <rect key="frame" x="155" y="398" width="260" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZg-LJ-8cK">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="UqY-hn-r61"/>
-                                            <constraint firstAttribute="width" constant="80" id="pEO-bT-pdp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
-                                        <state key="normal" title="Jump">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onJumpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZB-tg-ctw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-Ry-9yP">
-                                        <rect key="frame" x="90" y="0.0" width="80" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="0cB-XW-ciH"/>
-                                            <constraint firstAttribute="height" constant="40" id="1Y3-y3-rzK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
-                                        <state key="normal" title="Coin">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onCoinPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdR-jM-9xb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-hA-xAX">
-                                        <rect key="frame" x="180" y="0.0" width="80" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="BL8-wD-AAt"/>
-                                            <constraint firstAttribute="width" constant="80" id="xpP-BP-1OE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
-                                        <state key="normal" title="1-UP">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="on1UpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mby-Ye-ypQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRw-Ws-zos" userLabel="MusicButton">
-                                <rect key="frame" x="500" y="28" width="80" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hj-Ry-9yP">
+                                <rect key="frame" x="260" y="400" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="SYQ-WF-QeX"/>
-                                    <constraint firstAttribute="height" constant="40" id="ug2-sA-F1J"/>
+                                    <constraint firstAttribute="width" constant="80" id="0cB-XW-ciH"/>
+                                    <constraint firstAttribute="height" constant="40" id="1Y3-y3-rzK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
-                                <state key="normal" title="Pause"/>
+                                <state key="normal" title="Coin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="onMusicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9a-Ld-w3Z"/>
+                                    <action selector="onCoinPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdR-jM-9xb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-hA-xAX">
+                                <rect key="frame" x="348" y="400" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BL8-wD-AAt"/>
+                                    <constraint firstAttribute="width" constant="80" id="xpP-BP-1OE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
+                                <state key="normal" title="1-UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on1UpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mby-Ye-ypQ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mario clean" translatesAutoresizingMaskIntoConstraints="NO" id="hE9-16-z2F">
@@ -117,19 +97,38 @@
                                     <constraint firstAttribute="width" constant="136" id="HdK-qn-V1L"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZg-LJ-8cK">
+                                <rect key="frame" x="159" y="400" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.1203324678" blue="0.1911518612" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UqY-hn-r61"/>
+                                    <constraint firstAttribute="width" constant="80" id="pEO-bT-pdp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="20"/>
+                                <state key="normal" title="Jump">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onJumpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZB-tg-ctw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aRw-Ws-zos" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="21R-10-teI"/>
-                            <constraint firstItem="QTL-1w-lmW" firstAttribute="top" secondItem="hE9-16-z2F" secondAttribute="bottom" constant="40" id="9Gq-Nj-gMg"/>
                             <constraint firstItem="NTc-b7-eT2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FAm-3r-tSQ"/>
                             <constraint firstItem="NTc-b7-eT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FpQ-Vx-1No"/>
                             <constraint firstItem="aRw-Ws-zos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="JIg-lN-4sr"/>
+                            <constraint firstItem="3hj-Ry-9yP" firstAttribute="leading" secondItem="JZg-LJ-8cK" secondAttribute="trailing" constant="20" id="JQA-Oj-xem"/>
                             <constraint firstItem="mmO-P2-rcz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ol1-du-RVy"/>
+                            <constraint firstItem="Gjf-hA-xAX" firstAttribute="leading" secondItem="3hj-Ry-9yP" secondAttribute="trailing" constant="20" id="R6S-MR-6iJ"/>
                             <constraint firstItem="hE9-16-z2F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tev-Fq-vSr"/>
                             <constraint firstItem="hE9-16-z2F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y4U-C2-9Tw"/>
-                            <constraint firstItem="QTL-1w-lmW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gyi-q6-5uM"/>
                             <constraint firstItem="mmO-P2-rcz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h42-5b-ixl"/>
+                            <constraint firstItem="3hj-Ry-9yP" firstAttribute="top" secondItem="hE9-16-z2F" secondAttribute="bottom" constant="40" id="hyG-iw-MTc"/>
+                            <constraint firstItem="3hj-Ry-9yP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qtz-4a-uOe"/>
+                            <constraint firstItem="Gjf-hA-xAX" firstAttribute="top" secondItem="hE9-16-z2F" secondAttribute="bottom" constant="40" id="tYy-uD-D1s"/>
+                            <constraint firstItem="JZg-LJ-8cK" firstAttribute="top" secondItem="hE9-16-z2F" secondAttribute="bottom" constant="40" id="vsr-rg-GES"/>
                         </constraints>
                     </view>
                     <connections>

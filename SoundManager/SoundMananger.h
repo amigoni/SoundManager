@@ -13,7 +13,7 @@
 
 +(SoundMananger*) sharedManager;
 
-@property (strong,nonatomic) AVAudioPlayer *backgroundMusicPlayer;
+@property (strong,nonatomic) AVAudioPlayer *musicPlayer;
 @property BOOL musicPlaying;
 @property BOOL musicEnabled;
 
