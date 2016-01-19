@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *musicButton;
+@property (weak, nonatomic) IBOutlet UIImageView *mushroom;
+@property (weak, nonatomic) IBOutlet UIImageView *coin;
+@property (weak, nonatomic) IBOutlet UIImageView *mario;
 
 @end
 

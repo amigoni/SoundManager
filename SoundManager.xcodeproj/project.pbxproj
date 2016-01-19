@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70156931C4DAEBB0079F518 /* SuperMario256.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70156921C4DAEAC0079F518 /* SuperMario256.ttf */; };
+		A70156951C4DB23F0079F518 /* 01 Birabuto Kingdom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70156941C4DB23F0079F518 /* 01 Birabuto Kingdom.mp3 */; };
 		A7DC698D1C4D7CF900F1CE84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC698C1C4D7CF900F1CE84 /* main.m */; };
 		A7DC69901C4D7CF900F1CE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC698F1C4D7CF900F1CE84 /* AppDelegate.m */; };
 		A7DC69931C4D7CF900F1CE84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC69921C4D7CF900F1CE84 /* ViewController.m */; };
@@ -15,6 +17,12 @@
 		A7DC699B1C4D7CF900F1CE84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69991C4D7CF900F1CE84 /* LaunchScreen.storyboard */; };
 		A7DC69A61C4D7CF900F1CE84 /* SoundManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC69A51C4D7CF900F1CE84 /* SoundManagerTests.m */; };
 		A7DC69B11C4D7CF900F1CE84 /* SoundManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC69B01C4D7CF900F1CE84 /* SoundManagerUITests.m */; };
+		A7DC69C41C4D7D9700F1CE84 /* SoundMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DC69C31C4D7D9700F1CE84 /* SoundMananger.m */; };
+		A7DC69D01C4DA91D00F1CE84 /* smb_1-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69CB1C4DA91D00F1CE84 /* smb_1-up.wav */; };
+		A7DC69D11C4DA91D00F1CE84 /* smb_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69CC1C4DA91D00F1CE84 /* smb_coin.wav */; };
+		A7DC69D21C4DA91D00F1CE84 /* smb_bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69CD1C4DA91D00F1CE84 /* smb_bump.wav */; };
+		A7DC69D31C4DA91D00F1CE84 /* smb_powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69CE1C4DA91D00F1CE84 /* smb_powerup.wav */; };
+		A7DC69D41C4DA91D00F1CE84 /* smb_jump-small.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7DC69CF1C4DA91D00F1CE84 /* smb_jump-small.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70156921C4DAEAC0079F518 /* SuperMario256.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SuperMario256.ttf; sourceTree = "<group>"; };
+		A70156941C4DB23F0079F518 /* 01 Birabuto Kingdom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Birabuto Kingdom.mp3"; sourceTree = "<group>"; };
 		A7DC69881C4D7CF900F1CE84 /* SoundManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DC698C1C4D7CF900F1CE84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7DC698E1C4D7CF900F1CE84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +61,13 @@
 		A7DC69AC1C4D7CF900F1CE84 /* SoundManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DC69B01C4D7CF900F1CE84 /* SoundManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundManagerUITests.m; sourceTree = "<group>"; };
 		A7DC69B21C4D7CF900F1CE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DC69C21C4D7D9700F1CE84 /* SoundMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundMananger.h; sourceTree = "<group>"; };
+		A7DC69C31C4D7D9700F1CE84 /* SoundMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundMananger.m; sourceTree = "<group>"; };
+		A7DC69CB1C4DA91D00F1CE84 /* smb_1-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "smb_1-up.wav"; sourceTree = "<group>"; };
+		A7DC69CC1C4DA91D00F1CE84 /* smb_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smb_coin.wav; sourceTree = "<group>"; };
+		A7DC69CD1C4DA91D00F1CE84 /* smb_bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smb_bump.wav; sourceTree = "<group>"; };
+		A7DC69CE1C4DA91D00F1CE84 /* smb_powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smb_powerup.wav; sourceTree = "<group>"; };
+		A7DC69CF1C4DA91D00F1CE84 /* smb_jump-small.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "smb_jump-small.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +118,16 @@
 		A7DC698A1C4D7CF900F1CE84 /* SoundManager */ = {
 			isa = PBXGroup;
 			children = (
+				A7DC69C01C4D7D3800F1CE84 /* Model */,
+				A7DC69BF1C4D7D2D00F1CE84 /* View */,
+				A7DC69BE1C4D7D2500F1CE84 /* Controller */,
+				A7DC69C11C4D7D3E00F1CE84 /* Services */,
 				A7DC698E1C4D7CF900F1CE84 /* AppDelegate.h */,
 				A7DC698F1C4D7CF900F1CE84 /* AppDelegate.m */,
-				A7DC69911C4D7CF900F1CE84 /* ViewController.h */,
-				A7DC69921C4D7CF900F1CE84 /* ViewController.m */,
-				A7DC69941C4D7CF900F1CE84 /* Main.storyboard */,
 				A7DC69971C4D7CF900F1CE84 /* Assets.xcassets */,
-				A7DC69991C4D7CF900F1CE84 /* LaunchScreen.storyboard */,
 				A7DC699C1C4D7CF900F1CE84 /* Info.plist */,
+				A70156921C4DAEAC0079F518 /* SuperMario256.ttf */,
+				A7DC69C51C4D94DB00F1CE84 /* Resources */,
 				A7DC698B1C4D7CF900F1CE84 /* Supporting Files */,
 			);
 			path = SoundManager;
@@ -138,6 +157,61 @@
 				A7DC69B21C4D7CF900F1CE84 /* Info.plist */,
 			);
 			path = SoundManagerUITests;
+			sourceTree = "<group>";
+		};
+		A7DC69BE1C4D7D2500F1CE84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A7DC69911C4D7CF900F1CE84 /* ViewController.h */,
+				A7DC69921C4D7CF900F1CE84 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A7DC69BF1C4D7D2D00F1CE84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7DC69991C4D7CF900F1CE84 /* LaunchScreen.storyboard */,
+				A7DC69941C4D7CF900F1CE84 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A7DC69C01C4D7D3800F1CE84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A7DC69C11C4D7D3E00F1CE84 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7DC69C21C4D7D9700F1CE84 /* SoundMananger.h */,
+				A7DC69C31C4D7D9700F1CE84 /* SoundMananger.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A7DC69C51C4D94DB00F1CE84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7DC69C61C4D94E800F1CE84 /* Sounds */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A7DC69C61C4D94E800F1CE84 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A70156941C4DB23F0079F518 /* 01 Birabuto Kingdom.mp3 */,
+				A7DC69CB1C4DA91D00F1CE84 /* smb_1-up.wav */,
+				A7DC69CC1C4DA91D00F1CE84 /* smb_coin.wav */,
+				A7DC69CD1C4DA91D00F1CE84 /* smb_bump.wav */,
+				A7DC69CE1C4DA91D00F1CE84 /* smb_powerup.wav */,
+				A7DC69CF1C4DA91D00F1CE84 /* smb_jump-small.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +317,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70156931C4DAEBB0079F518 /* SuperMario256.ttf in Resources */,
+				A7DC69D01C4DA91D00F1CE84 /* smb_1-up.wav in Resources */,
+				A7DC69D41C4DA91D00F1CE84 /* smb_jump-small.wav in Resources */,
 				A7DC699B1C4D7CF900F1CE84 /* LaunchScreen.storyboard in Resources */,
+				A7DC69D11C4DA91D00F1CE84 /* smb_coin.wav in Resources */,
+				A7DC69D21C4DA91D00F1CE84 /* smb_bump.wav in Resources */,
+				A7DC69D31C4DA91D00F1CE84 /* smb_powerup.wav in Resources */,
 				A7DC69981C4D7CF900F1CE84 /* Assets.xcassets in Resources */,
 				A7DC69961C4D7CF900F1CE84 /* Main.storyboard in Resources */,
+				A70156951C4DB23F0079F518 /* 01 Birabuto Kingdom.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DC69C41C4D7D9700F1CE84 /* SoundMananger.m in Sources */,
 				A7DC69931C4D7CF900F1CE84 /* ViewController.m in Sources */,
 				A7DC69901C4D7CF900F1CE84 /* AppDelegate.m in Sources */,
 				A7DC698D1C4D7CF900F1CE84 /* main.m in Sources */,
@@ -498,6 +580,7 @@
 				A7DC69B71C4D7CF900F1CE84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7DC69B81C4D7CF900F1CE84 /* Build configuration list for PBXNativeTarget "SoundManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +589,7 @@
 				A7DC69BA1C4D7CF900F1CE84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7DC69BB1C4D7CF900F1CE84 /* Build configuration list for PBXNativeTarget "SoundManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +598,7 @@
 				A7DC69BD1C4D7CF900F1CE84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
